@@ -1,11 +1,7 @@
 import style from '../List.module.scss'
+import Itask from '../../../Types/task';
 
-type Props = {
-    name: string;
-    time: string;
-  };
-
-function Item ({ name, time } : Props) {
+function Item ({ name, time, selected, completed, id } : Itask) {
     return (
         <li className={style.item}>
             <h3>{name}</h3>
